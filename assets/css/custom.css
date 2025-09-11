@@ -1,5 +1,60 @@
 /* Custom styles for the portfolio website */
 
+/* Fix for Education section */
+#two.spotlight {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    min-height: 100vh;
+    overflow: visible;
+}
+
+#two .image.fit.main {
+    flex: 0 0 35%;
+    position: relative;
+    height: 100%;
+    display: block;
+    overflow: hidden;
+    background-color: #f0f0f0; /* Light background to fill empty space */
+}
+
+#two .image.fit.main img {
+    width: 40%; /* Further reduced from 60% to 40% */
+    height: auto; /* Keeps auto height to maintain aspect ratio */
+    max-height: 30%; /* Further reduced from 40% to 30% */
+    object-fit: contain; /* Keeps the image's aspect ratio */
+    object-position: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the image properly */
+}
+
+#two .content {
+    flex: 0 0 75%;
+    height: auto;
+    overflow: visible;
+    max-width: 75%;
+    position: relative;
+    padding: 4em;
+    background: #1c1d26; /* Ensure content has solid background to prevent image showing through */
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1); /* Subtle shadow to create separation */
+}
+
+/* Override some default spotlight behaviors for section two */
+#two.spotlight:before {
+    display: none;
+}
+
+#two.spotlight .image.main {
+    display: block;
+}
+
+#two .goto-next {
+    bottom: 0;
+    position: absolute;
+}
+
 /* Education section styling */
 .education-entry {
     margin-bottom: 1.5em;
@@ -26,22 +81,9 @@
 }
 
 /* Styling for the education section */
-#two {
-    background-color: #2e3141;
-    color: #ffffff;
-    padding: 6em 0;
-    text-align: center;
-}
-
-#two .content {
-    max-width: 70em;
-    margin: 0 auto;
-    padding: 0 2em;
-}
-
 #two .education-entry {
     text-align: left;
-    max-width: 50em;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 85%; /* Add max width to entire education entry */
+    line-height: 1.6; /* Better line spacing for readability */
+    word-wrap: break-word;
 }
