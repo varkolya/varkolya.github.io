@@ -3126,7 +3126,8 @@ input, select, textarea {
 			height: 101%;
 			padding: 3em 3em;
 			top: 0;
-			width: 70em;
+			width: 80%;
+			max-width: 70em;
 		}
 
 		.spotlight.left .content {
