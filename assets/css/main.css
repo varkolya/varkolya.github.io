@@ -3137,6 +3137,22 @@ input, select, textarea {
 			bottom: 0;
 		}
 
+		.spotlight.top .content2, .spotlight.bottom .content2 {
+			left: 0;
+			padding: 5.1em 0 3.1em 0;
+			width: 100%;
+		}
+
+		.spotlight.top .content2 {
+			border-bottom-width: 0.35em;
+			top: 0;
+		}
+
+		.spotlight.bottom .content2 {
+			border-top-width: 0.35em;
+			bottom: 0;
+		}
+
 		.spotlight.left .content, .spotlight.right .content {
 			height: 101%;
 			padding: 3em 3em;
