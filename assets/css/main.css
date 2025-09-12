@@ -2972,8 +2972,8 @@ input, select, textarea {
 		background-position: center center;
 		background-size: cover;
 		box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25);
-		height: 100vh;
-		overflow: hidden;
+		min-height: 100vh;
+		overflow: visible;
 		position: relative;
 	}
 
@@ -3090,6 +3090,21 @@ input, select, textarea {
 			position: absolute;
 		}
 
+		.spotlight .content2 {
+			-moz-transform: translate(0,0);
+			-webkit-transform: translate(0,0);
+			-ms-transform: translate(0,0);
+			transform: translate(0,0);
+			-moz-transition: -moz-transform 1s ease, opacity 1s ease;
+			-webkit-transition: -webkit-transform 1s ease, opacity 1s ease;
+			-ms-transition: -ms-transform 1s ease, opacity 1s ease;
+			transition: transform 1s ease, opacity 1s ease;
+			background: rgba(23, 24, 32, 0.95);
+			border-style: solid;
+			opacity: 1;
+			position: relative;
+		}
+
 		.spotlight .goto-next {
 			-moz-transform: translate(0,0);
 			-webkit-transform: translate(0,0);
@@ -3130,12 +3145,30 @@ input, select, textarea {
 			max-width: 70em;
 		}
 
+		.spotlight.left .content2, .spotlight.right .content2 {
+			height: 101%;
+			padding: 3em 3em;
+			top: 0;
+			width: 80%;
+			max-width: 70em;
+		}
+
 		.spotlight.left .content {
 			border-right-width: 0.35em;
 			left: 0;
 		}
 
+		.spotlight.left .content2 {
+			border-right-width: 0.35em;
+			left: 0;
+		}
+
 		.spotlight.right .content {
+			border-left-width: 0.35em;
+			right: 0;
+		}
+
+		.spotlight.right .content2 {
 			border-left-width: 0.35em;
 			right: 0;
 		}
@@ -3149,6 +3182,10 @@ input, select, textarea {
 		}
 
 		.spotlight.style3 .content {
+			border-color: #39c088;
+		}
+
+		.spotlight.style3 .content2 {
 			border-color: #39c088;
 		}
 
