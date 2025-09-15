@@ -1,6 +1,13 @@
 @import url("fontawesome-all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,300,100italic,300italic");
 
+/* Prevent horizontal overflow */
+html, body {
+    overflow-x: hidden;
+    width: 100vw;
+    max-width: 100vw;
+}
+
 /*
 	Landed by HTML5 UP
 	html5up.net | @ajlkn
