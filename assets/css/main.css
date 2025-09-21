@@ -4363,3 +4363,31 @@ input, select, textarea {
 .education-entry strong {
     color: #e44c65;
 }
+
+/* Achievements and Skills section styling */
+.achievements-list ul, .skills-list ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.achievements-list li, .skills-list li {
+    margin-bottom: 1em;
+    line-height: 1.4;
+}
+
+.skills-list strong {
+    color: #e44c65;
+    margin-right: 0.5em;
+}
+
+.achievements-list li:before {
+    content: "★";
+    color: #e44c65;
+    margin-right: 0.5em;
+}
+
+@media screen and (max-width: 980px) {
+    .achievements-list, .skills-list {
+        margin-bottom: 2em;
+    }
+}
