@@ -2425,6 +2425,20 @@ input, select, textarea {
 		position: relative;
 	}
 
+		/* Hide icon labels on desktop */
+		@media screen and (min-width: 737px) {
+			#header nav .icon > .label {
+				display: none;
+			}
+		}
+
+		/* Show icon labels on mobile */
+		@media screen and (max-width: 736px) {
+			#header nav .icon > .label {
+				display: inline-block;
+			}
+		}
+
 		.icon:before {
 			-moz-osx-font-smoothing: grayscale;
 			-webkit-font-smoothing: antialiased;
