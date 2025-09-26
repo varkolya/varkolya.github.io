@@ -4353,6 +4353,17 @@ input, select, textarea {
 
 	}
 
+/* Project section styling */
+#five section p {
+    color: #ffffff;
+    transition: color 0.2s ease-in-out;
+}
+
+#five section:hover h3,
+#five section:hover p {
+    color: #e44c65;
+}
+
 /* Education section styling */
 .education-entry {
     margin-bottom: 1.5em;
