@@ -42,19 +42,18 @@
 
 						<!-- Content -->
 							<section id="content">
-								<a href="#" class="image fit"><img src="../images/pic07.jpg" alt="" /></a>
 								<h3>Executive Summary</h3>
 								<p>This project explores unsupervised deep learning for early detection of Phytophthora cactorum infection in strawberry leaves using hyperspectral imaging. P. cactorum infests strawberry crowns in wet and cold climate conditions and kills the plant quickly. Timely detection of infestation is thus crucial in strawberry farming to limit economic losses. Current, labor-intensive methods for detecting the pathogen are expensive and time-consuming, emphasizing the need for robust unsupervised methods.</p>
 								<p> For fast, label-free detection of early infestation stage, 2D and 3D convolutional autoencoder architectures are explored. While no configuration achieves fully satisfactory detection performance, the experiments clarify strengths and limits of unsupervised disease detection and show approaches valuable for researchers. These include demonstrating a number of steps taken to eliminate unwanted reconstruction errors, as well as introducing two novel error metrics designed to improve sensitivity in bands and regions most indicative of disease. The project also shows that a few wavelengths can be sufficient for analyzing the data, as comparable results are achieved with them to those obtained using the full spectrum.</p>
 								<p> This project was my master's thesis. I wrote it in collaboration with a peer, and here I focus primarily on showing my own work.</p>
-								<h3>Sed Magna Ornare</h3>
-								<p>In vestibulum massa quis arcu lobortis tempus. Nam pretium arcu in odio vulputate luctus. Suspendisse euismod lorem eget lacinia fringilla. Sed sed felis justo. Nunc sodales elit in laoreet aliquam. Nam gravida, nisl sit amet iaculis porttitor, risus nisi rutrum metus. In accumsan lorem nunc ultrices a ac eu accumsan ac id nullam. Nec lobortis. Faucibus. Mi commodo laoreet arcu at non mi lacinia aliquet non lobortis phasellus accumsan nascetur varius. Integer orci porttitor eu faucibus aliquet faucibus ac accumsan adipiscing accumsan odio. Ut adipiscing.</p>
+								<h3>A word about hyperspectral images - what we're working with</h3>
+								<p>Unlike classical RGB imaging, which captures only 3 color channels (red, green, and blue), hyperspectral images record information about <b>light reflectance across hundreds of wavelengths.</b>
+								This results in a high-dimensional data structure known as a <b>hypercube</b>, with arrays of two-dimensional images (spatial dimensions x, y) and one-dimensional wavelengths (spectral dimension λ).</p>
+								<span class="image fit"><img src="../images/strawberry/hyperspectral_image.png" alt="" /></span>
 								<ul>
-									<li>Faucibus orci lobortis ac adipiscing integer.</li>
-									<li>Col accumsan arcu mi aliquet placerat.</li>
-									<li>Lobortis vestibulum ut magna tempor massa nascetur.</li>
-									<li>Blandit massa non blandit tempor interdum.</li>
-									<li>Lacinia mattis arcu nascetur lobortis.</li>
+									<li>Each pixel in the data cube contains a detailed reflectance spectrum.</li>
+									<li>This rich dimensionality has some benefits, as we have <b>very detailed data</b>, but it also poses <b>challenges for storage, processing, and analysis.</b></li>
+									<li>In our data, the images are captured in the visible and near-infrared (NIR) spectrum (400-1000 nm).</li>
 								</ul>
 							</section>
 
