@@ -4354,13 +4354,16 @@ input, select, textarea {
 	}
 
 /* Project section styling */
-#five section p {
+#five section p,
+.projects-grid section p {
     color: #ffffff;
     transition: color 0.2s ease-in-out;
 }
 
 #five section:hover h3,
-#five section:hover p {
+#five section:hover p,
+.projects-grid section:hover h3,
+.projects-grid section:hover p {
     color: #e44c65;
 }
 
