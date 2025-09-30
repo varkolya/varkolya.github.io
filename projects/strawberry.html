@@ -42,10 +42,11 @@
 
 						<!-- Content -->
 							<section id="content">
-								<h3>Executive Summary</h3>
-								<p>This project explores unsupervised deep learning for early detection of Phytophthora cactorum infection in strawberry leaves using hyperspectral imaging. P. cactorum infests strawberry crowns in wet and cold climate conditions and kills the plant quickly. Timely detection of infestation is thus crucial in strawberry farming to limit economic losses. Current, labor-intensive methods for detecting the pathogen are expensive and time-consuming, emphasizing the need for robust unsupervised methods.</p>
-								<p> For fast, label-free detection of early infestation stage, 2D and 3D convolutional autoencoder architectures are explored. While no configuration achieves fully satisfactory detection performance, the experiments clarify strengths and limits of unsupervised disease detection and show approaches valuable for researchers. These include demonstrating a number of steps taken to eliminate unwanted reconstruction errors, as well as introducing two novel error metrics designed to improve sensitivity in bands and regions most indicative of disease. The project also shows that a few wavelengths can be sufficient for analyzing the data, as comparable results are achieved with them to those obtained using the full spectrum.</p>
+								<h3>Summary</h3>
+								<p><figure style="margin: 0; padding: 0;"><span class="image right"><img src="../images/strawberry/Pcactorum.png" alt="P. cactorum infection" /><figcaption style="text-align: center; font-size: 0.9em; margin-top: 0.5em;">P. cactorum infected strawberry plant</figcaption></span></figure>This project explores <b>unsupervised deep learning for early detection of Phytophthora cactorum infection in strawberry leaves using hyperspectral imaging.</b> P. cactorum infests strawberry crowns in wet and cold climate conditions and kills the plant quickly. <b>Timely detection of infestation is thus crucial</b> in strawberry farming to limit economic losses. Current, labor-intensive methods for detecting the pathogen are expensive and time-consuming, emphasizing the need for robust unsupervised methods.</p>
+								<p> For fast, <b>label-free detection</b> of early infestation stage, <b>2D and 3D convolutional autoencoder architectures are explored.</b> While no configuration achieves fully satisfactory detection performance, the experiments clarify strengths and limits of unsupervised disease detection and show approaches valuable for researchers. These include demonstrating a number of steps taken to eliminate unwanted reconstruction errors, as well as introducing two novel error metrics designed to improve sensitivity in bands and regions most indicative of disease. The project also shows that a few wavelengths can be sufficient for analyzing the data, as comparable results are achieved with them to those obtained using the full spectrum.</p>
 								<p> This project was my master's thesis. I wrote it in collaboration with a peer, and here I focus primarily on showing my own work.</p>
+								
 								<h3>A word about hyperspectral images - what we're working with</h3>
 								<p>Unlike classical RGB imaging, which captures only 3 color channels (red, green, and blue), hyperspectral images record information about <b>light reflectance across hundreds of wavelengths.</b>
 								This results in a high-dimensional data structure known as a <b>hypercube</b>, with arrays of two-dimensional images (spatial dimensions x, y) and one-dimensional wavelengths (spectral dimension λ).</p>
@@ -55,6 +56,9 @@
 									<li>This rich dimensionality has some benefits, as we have <b>very detailed data</b>, but it also poses <b>challenges for storage, processing, and analysis.</b></li>
 									<li>In our data, the images are captured in the visible and near-infrared (NIR) spectrum (400-1000 nm).</li>
 								</ul>
+
+								<h3>Data</h3>
+
 							</section>
 
 					</div>
