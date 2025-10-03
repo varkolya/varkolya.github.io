@@ -58,13 +58,34 @@
 								</ul>
 
 								<h3>Data</h3>
-								<p><figure style="margin: 0; padding: 0;"><span class="image right" style="width: 210px; background: rgba(23, 24, 32, 0.95);"><img src="../images/strawberry/Cropped_image.png" alt="Image cropping" style="width: 100%; background: transparent;" /><figcaption style="text-align: left; font-size: 0.9em; margin-top: 0.5em; background: rgba(23, 24, 32, 0.95);">Image cropping. Such smaller, cropped images are used throughout this project.</figcaption></span></figure>The data was collected from 20 strawberry plants, some of which were deliberately infected with P. Cactorum. Images of healthy and infected plants were taken over multiple days using a hyperspectral camera operating in the visible and NIR spectrum. The spectral resolution of each image is approximately 2.55 nm, resulting in 224 spectral bands per image.</p>
+								<p><figure style="margin: 0; padding: 0;"><span class="image right" style="width: 400px; background: rgba(23, 24, 32, 0.95)"><img src="../images/strawberry/Data.png" alt="Nr. of images" style="width: 100%;" /><figcaption style="text-align: left; font-size: 0.9em; margin-top: 0.5em; background: rgba(23, 24, 32, 0.95)">Number of images in each categry.</figcaption></span></figure>The data was collected from 20 strawberry plants, some of which were deliberately infected with P. Cactorum. Images of healthy and infected plants were taken over multiple days using a hyperspectral camera operating in the visible and NIR spectrum. The spectral resolution of each image is approximately 2.55 nm, resulting in 224 spectral bands per image.</p>
+								<p>Infected leaves were split into 3 groups based on the number of days elapsed since infection &rarr; Might be helpful at determining early disease.</p>
 								<p>Since the project focuses on disease symptoms on plant leaves, cropped-out images were used of the leaves. Furthermore, they are resized to have the same spatial dimensions, 256x256 pixels. Benefits:</p>
 								<ul>
 									<li>Reduced spatial dimensions and overall size &rarr; computationally beneficial for storing, loading, and processing the data.</li>
 									<li>Increases the relatively small number of samples (a plant usually had multiple leaves), as each leaf becomes an individual image.</li>
 									<li>Every image has the same square shape which is required in a batch at training.</li>
 								</ul>
+								<p>Each image is accompanied by a mask that can isolate the leaf by filtering out irrelevant background pixels. Masks are utilized during the project, where appropriate.</p>
+
+								<div style="display: flex; gap: 20px; justify-content: center; margin-top: 2em;">
+									<figure style="margin: 0; padding: 0; flex: 1;">
+										<div>
+											<span class="image fit" style="height: 400px; margin-bottom: 0;">
+												<img src="../images/strawberry/Cropped_image.png" alt="Data visualization" style="background: rgba(23, 24, 32, 0.95); height: 100%; object-fit: contain;" />
+											</span>
+											<figcaption style="text-align: left; font-size: 0.9em; margin-top: 0.5em; padding-left: 8.15em; padding-right: 8em;">Image cropping. Such smaller, cropped images are used throughout this project.</figcaption>
+										</div>
+									</figure>
+									<figure style="margin: 0; padding: 0; flex: 1;">
+										<div>
+											<span class="image fit" style="height: 400px; margin-bottom: 0;">
+												<img src="../images/strawberry/Mask_example.png" alt="Mask example" style="background: rgba(23, 24, 32, 0.95); height: 100%; object-fit: contain;" />
+											</span>
+											<figcaption style="text-align: left; font-size: 0.9em; margin-top: 0.5em; padding-left: 5.25em; padding-right: 5em;">Mask and background removal. Masks can be used to filter out irrelevant background pixels.</figcaption>
+										</div>
+									</figure>
+								</div>
 
 							</section>
 
