@@ -43,14 +43,14 @@
 						<!-- Content -->
 							<section id="content">
 								<h3>Summary</h3>
-								<p><figure style="margin: 0; padding: 0;"><span class="image right"><img src="../images/strawberry/Pcactorum.png" alt="P. cactorum infection" /><figcaption style="text-align: center; font-size: 0.9em; margin-top: 0.5em;">P. cactorum infected strawberry plant</figcaption></span></figure>This project explores <b>unsupervised deep learning for early detection of Phytophthora cactorum infection in strawberry leaves using hyperspectral imaging.</b> P. cactorum infests strawberry crowns in wet and cold climate conditions and kills the plant quickly. <b>Timely detection of infestation is thus crucial</b> in strawberry farming to limit economic losses. Current, labor-intensive methods for detecting the pathogen are expensive and time-consuming, emphasizing the need for robust unsupervised methods.</p>
+								<p><figure style="margin: 0; padding: 0;"><span class="image right" style="background: rgba(23, 24, 32, 0.95);"><img src="../images/strawberry/Pcactorum.png" alt="P. cactorum infection" style="background: transparent;" /><figcaption style="text-align: left; font-size: 0.9em; margin-top: 0.5em; background: rgba(23, 24, 32, 0.95);">P. cactorum infected strawberry plant</figcaption></span></figure>This project explores <b>unsupervised deep learning for early detection of Phytophthora cactorum infection in strawberry leaves using hyperspectral imaging.</b> P. cactorum infests strawberry crowns in wet and cold climate conditions and kills the plant quickly. <b>Timely detection of infestation is thus crucial</b> in strawberry farming to limit economic losses. Current, labor-intensive methods for detecting the pathogen are expensive and time-consuming, emphasizing the need for robust unsupervised methods.</p>
 								<p> For fast, <b>label-free detection</b> of early infestation stage, <b>2D and 3D convolutional autoencoder architectures are explored.</b> While no configuration achieves fully satisfactory detection performance, the experiments clarify strengths and limits of unsupervised disease detection and show approaches valuable for researchers. These include demonstrating a number of steps taken to eliminate unwanted reconstruction errors, as well as introducing two novel error metrics designed to improve sensitivity in bands and regions most indicative of disease. The project also shows that a few wavelengths can be sufficient for analyzing the data, as comparable results are achieved with them to those obtained using the full spectrum.</p>
 								<p> This project was my master's thesis. I wrote it in collaboration with a peer, and here I focus primarily on showing my own work.</p>
 								
 								<h3>A word about hyperspectral images - what we're working with</h3>
 								<p>Unlike classical RGB imaging, which captures only 3 color channels (red, green, and blue), hyperspectral images record information about <b>light reflectance across hundreds of wavelengths.</b>
 								This results in a high-dimensional data structure known as a <b>hypercube</b>, with arrays of two-dimensional images (spatial dimensions x, y) and one-dimensional wavelengths (spectral dimension λ).</p>
-								<span class="image fit"><img src="../images/strawberry/hyperspectral_image.png" alt="" /></span>
+								<span class="image fit" style="background: rgba(23, 24, 32, 0.95);"><img src="../images/strawberry/hyperspectral_image.png" alt="" style="background: transparent;" /></span>
 								<ul>
 									<li>Each pixel in the data cube contains a detailed reflectance spectrum.</li>
 									<li>This rich dimensionality has some benefits, as we have <b>very detailed data</b>, but it also poses <b>challenges for storage, processing, and analysis.</b></li>
@@ -58,6 +58,13 @@
 								</ul>
 
 								<h3>Data</h3>
+								<p><figure style="margin: 0; padding: 0;"><span class="image right" style="width: 210px; background: rgba(23, 24, 32, 0.95);"><img src="../images/strawberry/Cropped_image.png" alt="Image cropping" style="width: 100%; background: transparent;" /><figcaption style="text-align: left; font-size: 0.9em; margin-top: 0.5em; background: rgba(23, 24, 32, 0.95);">Image cropping. Such smaller, cropped images are used throughout this project.</figcaption></span></figure>The data was collected from 20 strawberry plants, some of which were deliberately infected with P. Cactorum. Images of healthy and infected plants were taken over multiple days using a hyperspectral camera operating in the visible and NIR spectrum. The spectral resolution of each image is approximately 2.55 nm, resulting in 224 spectral bands per image.</p>
+								<p>Since the project focuses on disease symptoms on plant leaves, cropped-out images were used of the leaves. Furthermore, they are resized to have the same spatial dimensions, 256x256 pixels. Benefits:</p>
+								<ul>
+									<li>Reduced spatial dimensions and overall size &rarr; computationally beneficial for storing, loading, and processing the data.</li>
+									<li>Increases the relatively small number of samples (a plant usually had multiple leaves), as each leaf becomes an individual image.</li>
+									<li>Every image has the same square shape which is required in a batch at training.</li>
+								</ul>
 
 							</section>
 
