@@ -87,7 +87,17 @@
 									</figure>
 								</div>
 
-								<b>Data Preprocessing:</b>
+								
+								<b>Getting to know the data</b>
+								<p><figure style="margin: 0; padding: 0;"><span class="image right" style="background: rgba(23, 24, 32, 0.95);"><img src="../images/strawberry/Pcactorum_vs_healthy_FX10.png" alt="P. cactorum vs healthy" style="background: transparent;" /><figcaption style="text-align: left; font-size: 0.9em; margin-top: 0.5em; background: rgba(23, 24, 32, 0.95);">The figure compares the spectral signature of a healthy plant to that of a symptomatic infected plant. The spectra of 1000 sampled pixels of an image is shown, alongside the mean spectral signature and its standard deviation.</figcaption></span></figure></p>
+								<ul>
+									<li>Spectral signature of an infected leaf on the first day is hardly distinguishable from that of a healthy leaf.</li>
+									<li>As days pass after infection, some vague patterns emerge from the unhealthy plants. <b>The figure on the right shows the spectral signature of a P. cactorum infected plant, that showed visible symptoms, on its final day (with red) compared to that of a healthy plant (with blue).</b></li>
+									<li>For the P. cactorum infected image the rise of reflectance values around 530-560 nm is less prevalent. The increase around 700 nm is also less rapid, but keeps on increasing slowly until the end of the spectrum the camera is capable of capturing. This could be explained by the brownish discoloring caused by P. cactorum which is observed around 700 nm.</li>
+									<li>Plotting the spectra of from different areas of the leaves (rachis, veins, and the tips) suggest there might be spatial-spectral differences among healthy and infected leaves. </li>
+								</ul>
+
+								<p><b>Data Preprocessing</b></p>
 								<ul>
 									<li>Remove noisy bands below 430nm &rarr; <b>211 bands remain</b></li>
 									<li>Replace negative intensity values with 0 (instrument errors)</li>
@@ -102,13 +112,6 @@
 									<figcaption style="text-align: left; font-size: 0.9em; margin-top: 0.5em; background: rgba(23, 24, 32, 0.95);">The effect of min-max scaling and SNV transformation on the hyperspectral image. The plots show the spectral signature of 1000 sampled pixels of an image, the mean spectra and its standard deviation.</figcaption>
 								</span>
 
-								<p><b>Getting to know the data</b></p>
-								<p><figure style="margin: 0; padding: 0;"><span class="image right" style="background: rgba(23, 24, 32, 0.95);"><img src="../images/strawberry/Pcactorum_vs_healthy_FX10.png" alt="P. cactorum vs healthy" style="background: transparent;" /><figcaption style="text-align: left; font-size: 0.9em; margin-top: 0.5em; background: rgba(23, 24, 32, 0.95);">Caption</figcaption></span></figure></p>
-								<ul>
-									<li>Spectral signature of an infected leaf on the first day is hardly distinguishable from that of a healthy leaf.</li>
-									<li>As days pass after infection, some vague patterns emerge from the unhealthy plants. The figure on the right shows the spectral signature of a P. cactorum infected plant, that showed visible symptoms, on its final day (with red) compared to that of a healthy plant (with blue).</li>
-									<li></li>
-								</ul>
 
 							</section>
 
