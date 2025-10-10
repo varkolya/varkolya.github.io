@@ -112,6 +112,19 @@
 									<figcaption style="text-align: left; font-size: 0.9em; margin-top: 0.5em; background: rgba(23, 24, 32, 0.95);">The effect of min-max scaling and SNV transformation on the hyperspectral image. The plots show the spectral signature of 1000 sampled pixels of an image, the mean spectra and its standard deviation.</figcaption>
 								</span>
 
+								<h3>PCA based band selection</h3>
+								Working with the full hypercube poses several computational challenges. However, it is likely that the set of 211 wavelength bands is not entirely needed, as many of them are highly correlated.
+								<p>A common method to reduce the spectral dimension is to utilize PCA loadings as indicators for influential bands. Following Zhang et al. (2016), a few optimal wavelengths that carry the most important information from the full spectra can be determined by selecting peaks and valleys in PC loadings.</p>
+								Steps taken:
+								<ul>
+									<li>Conduct PCA on pixels from healthy and infected leaves.<br>Since the hyperspectral data cube is 3-dimensional, to accustom the data to a format PCA can be applied on, individual pixels are considered as data points with their spectral dimension as features. (&rarr; this is called "unfolding") <br> Each image can be reshaped to a long table, with relevant ROI pixels (those obtained after filtering for the leaves with the masks) acting as rows, and their reflectance values at different wavelengths as columns.
+									</li>
+									<li>Determine the number of PCs to retain (partly based on scree-plot, more based on PC score images).</li>
+									<li>Select important wavelengths based on highs and lows in the PC loadings. (Following Zhang et al. (2016), Li et al. (2018), Vargas et al. (2005).)</li>
+								</ul>
+								Score image után: 7 PCs retained, because meaningful information, write about what PCs show.
+								loading plot után: azok amik ppt-ben vannak
+								+2 band manually
 
 							</section>
 
