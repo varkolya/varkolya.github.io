@@ -115,7 +115,8 @@
 								<h3>PCA based band selection</h3>
 								Working with the full hypercube poses several computational challenges. However, it is likely that the set of 211 wavelength bands is not entirely needed, as many of them are highly correlated.
 								<p>A common method to reduce the spectral dimension is to utilize PCA loadings as indicators for influential bands. Following Zhang et al. (2016), a few optimal wavelengths that carry the most important information from the full spectra can be determined by selecting peaks and valleys in PC loadings.</p>
-								Steps taken:
+								<p><figure style="margin: 0; padding: 0;"><span class="image right" style="background: rgba(23, 24, 32, 0.95);"><img src="../images/strawberry/Hypercube_unfolding.png" alt="Hypercube unfolding" style="background: transparent;" /><figcaption style="text-align: left; font-size: 0.9em; margin-top: 0.5em; background: rgba(23, 24, 32, 0.95);">Hypercube unfolding. Reshaping the hyperspectral data cube for PCA. In the unfolded table, each row corresponds to a HSI pixel and each column represents its reflectance at a specific wavelength.</figcaption></span></figure></p>
+								<b>Steps taken:</b>
 								<ul>
 									<li>Conduct PCA on pixels from healthy and infected leaves.<br>Since the hyperspectral data cube is 3-dimensional, to accustom the data to a format PCA can be applied on, individual pixels are considered as data points with their spectral dimension as features. (&rarr; this is called "unfolding") <br> Each image can be reshaped to a long table, with relevant ROI pixels (those obtained after filtering for the leaves with the masks) acting as rows, and their reflectance values at different wavelengths as columns.
 									</li>
