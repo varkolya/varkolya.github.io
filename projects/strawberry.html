@@ -123,9 +123,22 @@
 									<li>Determine the number of PCs to retain (partly based on scree-plot, more based on PC score images).</li>
 									<li>Select important wavelengths based on highs and lows in the PC loadings. (Following Zhang et al. (2016), Li et al. (2018), Vargas et al. (2005).)</li>
 								</ul>
-								Score image után: 7 PCs retained, because meaningful information, write about what PCs show.
-								loading plot után: azok amik ppt-ben vannak
-								+2 band manually
+								<span class="image fit" style="background: rgba(23, 24, 32, 0.95);">
+									<img src="../images/strawberry/PCA_Score_images.png" alt="" style="background: transparent;" />
+									<figcaption style="text-align: left; font-size: 0.9em; margin-top: 0.5em; background: rgba(23, 24, 32, 0.95);">Principal component score images. False-color RGB images of one healthy and three infected images are shown alongside their corresponding PC score images. In the score images, lighter (whiter) pixels indicate higher PC scores, while darker pixels represent lower scores.</figcaption>
+								</span>
+
+								While the 8<sup>th</sup> principal component mainly captures noise, the first seven components seem to contain meaningful information &rarr; <b>7 PCs retained</b>.
+
+								<p><figure style="margin: 0; padding: 0;"><span class="image left" style="background: rgba(23, 24, 32, 0.95);"><img src="../images/strawberry/PCA_loadings_bandselect.png" alt="" style="background: transparent;" /><figcaption style="text-align: left; font-size: 0.9em; margin-top: 0.5em; background: rgba(23, 24, 32, 0.95);">Principal component loadings and selected wavelengths. PCA is conducted on the unfolded hyperspectral data from healthy and infected leaves. Loadings of the first seven PCs are shown with important wavelengths marked and the final selected bands are indicated by dashed lines.</figcaption></span></figure></p>
+								Loadings are the correlations between the original features (wavelengths) and the principal components:
+								<ul style="margin-left: 30em;">
+									<li>They essentially tell how much each original variable (wavelength) contributes to the principal component.</li>
+									<li>Highs and lows mean the given wavelength contributes relatively more (or relatively less) to the given PC. Since neighboring wavelengths are correlated, <b>peaks and valleys indicate relatively more importance compared to the neighboring wavelengths</b> &rarr; indicating important wavelengths.</li>
+								</ul>
+								&rArr; <b>15 wavelengths</b> are selected based on highs and lows in loadings.
+								<br>
+								&rArr; <b>2 Wavelengths</b> added manually. Because no wavelength was selected above 800 nm based on loading highs and lows, but prior data exploration indicated that this region contains differences between the spectra of healthy and diseased leaves, thus might be important.
 
 							</section>
 
