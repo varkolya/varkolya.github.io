@@ -139,6 +139,21 @@
 								&rArr; <b>15 wavelengths</b> are selected based on highs and lows in loadings.
 								<br>
 								&rArr; <b>2 Wavelengths</b> added manually. Because no wavelength was selected above 800 nm based on loading highs and lows, but prior data exploration indicated that this region contains differences between the spectra of healthy and diseased leaves, thus might be important.
+								
+								<br>
+								<br>
+								<br>
+
+								<p><h3>Our approach</h3></p>
+								<b>General idea:</b> Train autoencoders on healthy leaves only, use reconstruction errors to flag anomalies (diseased leaves).
+								<br>
+								&rarr; <b>Fully unsupervised</b> approach, no labels needed during training.
+								<br>
+								&rarr; Ideally convolutional autoencoders learn the underlying distribution of the data they were trained on. training them on healthy leaves makes it possible to recreate unseen healthy leaves with minimal errors, and more importantly, fail in reconstructing diseased leaves that deviate from this learned distribution. These reconstruction errors can then be used to detect anomalies in the leaves and finding a certain threshold above which the anomalies are grave enough to qualify the leaf as diseased.
+								<span class="image fit" style="background: rgba(23, 24, 32, 0.95);">
+									<img src="../images/strawberry/thumbnail.png" alt="" style="background: transparent;" />
+									<figcaption style="text-align: left; font-size: 0.9em; margin-top: 0.5em; background: rgba(23, 24, 32, 0.95);">General idea of our approach. Train autoencoders on healthy leaves only, use reconstruction errors to flag anomalies. Feeding the trained model infected leaves should produce higher reconstruction errors compared to healthy leaves.</figcaption>
+								</span>
 
 							</section>
 
