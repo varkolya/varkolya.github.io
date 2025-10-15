@@ -155,6 +155,17 @@
 									<figcaption style="text-align: left; font-size: 0.9em; margin-top: 0.5em; background: rgba(23, 24, 32, 0.95);">General idea of our approach. Train autoencoders on healthy leaves only, use reconstruction errors to flag anomalies. Feeding the trained model infected leaves should produce higher reconstruction errors compared to healthy leaves.</figcaption>
 								</span>
 
+								<b>Model setup:</b>
+								<ul>	
+									<li>Different <b>loss functions</b> are used for the autoencoder: Mainly <b>MSE, MAE</b>. (Others such as SSMS, MS-SSMS are also explored but didn't produce better results.)</li>
+									<li>Both 2D and 3D convolutional autoencoder architectures are explored. (2D convolutions treat the spectral dimension as channels, while 3D convolutions convolve in all three dimensions.)</li>
+									<li>Mainly the selected bands (17 bands) are used as input to the models, but a few models were trained on the full hypercube (211 bands) as well.</li>
+									<li> <b>Train, validation, test split:</b> 65% train (208 images), 15% validation (48 images), 20% test (65 images)</li>
+									<li> <b>Evaluation metrics:</b> AUC-ROC (Area Under the Receiver Operating Characteristic Curve), AUC-PR (Area Under the Precision-Recall Curve), and FPR@95%TPR (False Positive Rate at 95% True Positive Rate).</li>	
+									<li> <b>Data augmentations</b> (applied to the training set, except the resizing): Random horizontal flipping (with a probability of 0.5), random rotation (between 0&deg; and 180&deg;), resize images to 256&times;256 pixels.</li>
+									<li>Training data is shuffled before each epoch, helping the model to avoid getting stuck in local minima and contributing to better model generalization.</li>
+								</ul>
+
 							</section>
 
 					</div>
