@@ -170,11 +170,24 @@
 							Now, 2D convolutional layers are trained to model data and detect diseased strawberry leaves. The 2D refers to the filters (kernels) sliding across the image in two spatial dimensions during convolution, horizontally and vertically. By convolving over the input image, each filter creates a channel in the output feature map.
 							
 							<p><h3>Model architecture</h3></p>
-							Two broad architectures are explored:
+							Two broad model architectures are explored:
 							<ul>
 								<li><b>Hyperspectral Convolutional Autoencoder (HSCAE)</b>: This architecture is inspired by Varga et al. (2021), who designed a hyperspectral convolutional neural network (HSCNN) that proved to work well in other hyperspectral classification applications. Since their problem was a supervised classification task, I created a decoder for our task with a similar structure to that of the encoder. </li>
 								<li><b>Vanilla Autoencoder</b>: As initial HSCAE results were unsatisfactory, another, even simpler, albeit deeper model is constructed, that uses only standard convolutional layers with activation functions in between.</li>
 							</ul>
+
+							<span class="image fit" style="background: rgba(23, 24, 32, 0.95);">
+									<img src="../images/strawberry/HSCAE_architecture.png" alt="" style="background: transparent;" />
+									<figcaption style="text-align: left; font-size: 0.9em; margin-top: 0.5em; background: rgba(23, 24, 32, 0.95);"><b>Hyperspectral Convolutional Autoencoder (HSCAE) architecture.</b> HSCAE is an adaptation of the HSCNN by Varga et al. (2021). It is one of the architectures used to model our data.</figcaption>
+							</span>
+
+							<span class="image fit" style="background: rgba(23, 24, 32, 0.95);">
+									<img src="../images/strawberry/Vanilla_ae.png" alt="" style="background: transparent;" />
+									<figcaption style="text-align: left; font-size: 0.9em; margin-top: 0.5em; background: rgba(23, 24, 32, 0.95);"><b>Vanilla Autoencoder architecture.</b> It is another architecture used to model our data.</figcaption>
+							</span>
+
+
+
 							</section>
 
 					</div>
